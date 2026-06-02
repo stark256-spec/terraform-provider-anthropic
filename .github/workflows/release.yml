@@ -21,6 +21,7 @@ jobs:
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
+          git_user_signingkey: true
       - uses: goreleaser/goreleaser-action@v6
         with:
           version: latest

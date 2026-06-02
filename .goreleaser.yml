@@ -27,6 +27,8 @@ signs:
   - artifacts: checksum
     args:
       - "--batch"
+      - "--pinentry-mode"
+      - "loopback"
       - "--local-user"
       - "{{ .Env.GPG_FINGERPRINT }}"
       - "--output"
@@ -34,6 +36,6 @@ signs:
       - "--detach-sign"
       - "${artifact}"
 release:
-  draft: true
+  draft: false
 changelog:
   skip: true
