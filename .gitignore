@@ -1,0 +1,4 @@
+dist/
+*.exe
+terraform-provider-*
+!go.sum
